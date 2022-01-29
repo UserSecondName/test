@@ -25,6 +25,9 @@ span{
   float:right;
   max-width:200px;
   max-height:16px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #header-right-nick{
   float:left;
