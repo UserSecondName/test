@@ -2,7 +2,7 @@ import './App.css';
 import LinkButton from "./LinkButton";
 
 function App() {
-    const array=["awertus", "почта", "Выход"]
+    const array123=["awertus", "почта", "Выход"]
     return (
         <div className="App">
             <div className="header">
@@ -10,9 +10,10 @@ function App() {
                     <LinkButton anus ="Сделать стартовой"/>
                 </div>
                 <div className="header-right">
-                    <LinkButton anus ="awertus"/>
-                    <LinkButton anus ="почта"/>
-                    <LinkButton anus ="Выход"/>
+                    {array123.map((elem)=>{return <LinkButton anus = {elem}/>})}
+                    {/*<LinkButton anus ="awertus"/>*/}
+                    {/*<LinkButton anus ="почта"/>*/}
+                    {/*<LinkButton anus ="Выход"/>*/}
 
 
                     {/*<div id="header-right-nick"><span>a</span>wertus</div>*/}
