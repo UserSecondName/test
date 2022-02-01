@@ -1,5 +1,6 @@
 import './App.css';
 import LinkButton from "./LinkButton";
+import SearchYa from "./SearchYa";
 
 function App() {
     const array123=["awertus", "почта", "Выход"]
@@ -11,22 +12,11 @@ function App() {
                 </div>
                 <div className="header-right">
                     {array123.map((elem)=>{return <LinkButton anus = {elem}/>})}
-                    {/*<LinkButton anus ="awertus"/>*/}
-                    {/*<LinkButton anus ="почта"/>*/}
-                    {/*<LinkButton anus ="Выход"/>*/}
-
-
-                    {/*<div id="header-right-nick"><span>a</span>wertus</div>*/}
-                    {/*<div id="header-right-mail">Почта</div>*/}
-                    {/*<div id="header-right-exit">Выход</div>*/}
                 </div>
             </div>
             <div className="content">
-                <img id="image-content" src="image/ya_logo.png" alt="123"/>
+                <SearchYa />
             </div>
-            <LinkButton anus="big anus"/>
-            <LinkButton anus="another anus"/>
-            <LinkButton/>
             <div className="footer">
                 <p className="footer-logo"><b>ЯНДЕКС</b></p>
             </div>

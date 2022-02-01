@@ -1,0 +1,30 @@
+.Sgeneral{
+    display:flex;
+}
+.in1_1{
+    flex-grow:1;
+    height:inherit;
+}
+.in2_2{
+    width:90px;
+}
+.in1{
+    padding-left:1%;
+    width:100%;
+    float:left;
+    font-size: 19px;
+    outline: none;
+    border:3px solid white;
+    border-radius:0.75rem 0.625rem 0.625rem 0.75rem;
+}
+#in2{
+    width:100%;
+    height:inherit;
+    border:3px solid #FFCC00;
+    background-color:#FFCC00;
+    border-radius:0.75rem 0.625rem 0.625rem 0.75rem;
+    cursor:pointer;
+    font-family: Impact, fantasy;
+    font-size:20px;
+    letter-spacing:1px;
+}
