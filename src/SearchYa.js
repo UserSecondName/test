@@ -1,31 +1,38 @@
 import './SearchYa.css'
-import React from 'react'
 
-class SearchYa extends React.Component {
+import React,{useState} from 'react'
 
-    state = {
-        value: ''
+export const SearchYa = () => {
+
+    const [val, setValue] = useState("")
+    let newRef = React.createRef();
+    const onFindButton = () =>{
+        if(val === ""){
+            newRef.current.style.display="block"
+        } else{
+            console.log (val)
+            newRef.current.style.display="none"
+        }
     }
-         a = (event) => {
-            // console.log(event.target.value)
-            this.setState({value: event.target.value})
-        }
-         b = () => {
-            const val = this.state.value
-             console.log( val)
-        }
-        render()
-        {
-            // console.log("state: ", this.state)
+
             return <div className="Sgeneral">
-                <div className="in1_1">
-                    <input className="in1" type="search" onChange={this.a}/>
-                </div>
-                <div className="in2_2">
-                    <button id="in2" onClick = {this.b} >Найти</button>
-                </div>
+                         <div className="Sgeneral_search">
+                             <div className="in1_1">
+                                <input
+                                   className="in1"
+                                   type="search"
+                                   onChange={(event) =>setValue(event.target.value)}
+                                 />
+                             </div>
+                             <div className="in2_2">
+                                     <button  id="in2" onClick = {onFindButton}>Найти</button>
+                             </div>
+                         </div>
+                         <div className="content_warning">
+                             <p className="inner_content_warning" ref = {newRef}>Вы ничего не ввели!</p>
+                         </div>
             </div>
-        }
+
+
 
 }
-export default SearchYa

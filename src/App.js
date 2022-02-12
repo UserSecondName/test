@@ -1,9 +1,13 @@
 import './App.css';
 import LinkButton from "./LinkButton";
-import SearchYa from "./SearchYa";
+import {SearchYa} from "./SearchYa";
 
 function App() {
-    const array123=["awertus", "почта", "Выход"]
+    const array123=[
+            {name:"awertus", key: "1"},
+            {name:"почта", key: "2"},
+            {name:"Выход", key: "3"},
+        ]
     return (
         <div className="App">
             <div className="header">
@@ -11,11 +15,13 @@ function App() {
                     <LinkButton anus ="Сделать стартовой"/>
                 </div>
                 <div className="header-right">
-                    {array123.map((elem)=>{return <LinkButton anus = {elem}/>})}
+                    {array123.map((elem)=>{return <LinkButton anus = {elem.name} key={elem.key}/>})}
                 </div>
             </div>
             <div className="content">
-                <SearchYa />
+                    <SearchYa />
+
+
             </div>
             <div className="footer">
                 <p className="footer-logo"><b>ЯНДЕКС</b></p>

@@ -1,5 +1,9 @@
-.Sgeneral{
+.Sgeneral_search{
     display:flex;
+    border:3px solid #FFCC00;
+    border-radius: 0.75rem 0.625rem 0.625rem 0.75rem;
+    background-color:#FFCC00;
+    height:30px;
 }
 .in1_1{
     flex-grow:1;
@@ -28,4 +32,12 @@
     font-family: Impact, fantasy;
     font-size:20px;
     letter-spacing:1px;
+}
+#in2:focus{
+    border:3px solid #FFCC00;
+}
+.inner_content_warning{
+    color:red;
+    font-size:12px;
+    display:none;
 }

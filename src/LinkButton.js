@@ -4,7 +4,7 @@ const LinkButton = (props) => {
     if(text === undefined) text = "nichego"
     return <div className="general"
                 onClick={() => console.log(text)}>
-    {text}
+        {text}
     </div>
 }
 export default LinkButton

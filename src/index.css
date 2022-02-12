@@ -32,19 +32,16 @@ span{
 
 
 .content{
-
-  border:3px solid #FFCC00;
-  border-radius: 0.75rem 0.625rem 0.625rem 0.75rem;
-  background-color:#FFCC00;
-  width:50%;
+  width:60%;
   margin-left:23%;
-    margin-top:250px;
-    margin-bottom:300px;
-  height:30px;
+  margin-top:250px;
+  margin-bottom:270px;
   vertical-align: center;
   text-align:center;
-
 }
+
+
+
 
 .footer{
   font: 0.8em Arial,Helvetica,sans-serif;
