@@ -1,4 +1,5 @@
 body {
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -9,10 +10,15 @@ body {
 span{
   color:red;
 }
-
+.App{
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width:100%;
+}
 .header{
   font-size:12px;
-  height:20px;
+  min-height:20px;
   margin-top:2px;
   margin-left: 10px;
 }
@@ -29,28 +35,25 @@ span{
   flex-direction: row;
   justify-content: space-between;
 }
-
-
 .content{
+  flex-grow:1;
   width:60%;
-  margin-left:23%;
+
+  align-self: center;
   margin-top:250px;
   margin-bottom:270px;
   vertical-align: center;
   text-align:center;
+  padding-top:4%;
 }
-
-
-
-
 .footer{
   font: 0.8em Arial,Helvetica,sans-serif;
   text-align:center;
-  height:8%;
-  position:fixed;
-  bottom:0;
+  height:40px;
+  margin-bottom:0px;
   width:100%;
   color:grey;
+  margin-top:2px;
 }
 
 code {

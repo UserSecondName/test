@@ -20,11 +20,9 @@ function App() {
             </div>
             <div className="content">
                     <SearchYa />
-
-
             </div>
             <div className="footer">
-                <p className="footer-logo"><b>ЯНДЕКС</b></p>
+                <p ><b>ЯНДЕКС</b></p>
             </div>
         </div>);
 }
