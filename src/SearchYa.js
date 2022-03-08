@@ -5,19 +5,22 @@ import React,{useState} from 'react'
 export const SearchYa = () => {
 
     const [val, setValue] = useState("")
-    let warningRef = React.createRef();
-    let changeInputRef = React.createRef();
+    const [isErrorShow, setIsErrorShow] = useState (false)
+    let useChangeInputRef = React.createRef()
     const valCheck = () => {
-        const a = setValue (changeInputRef.current.value)
-        if (val === "" && a){
-            warningRef.current.style.display="block"
+        const a = setValue (useChangeInputRef.current.value)
+        if (val === "" && a) {
+            setIsErrorShow(true)
+            console.log("changes are working")
         } else{
-            warningRef.current.style.display="none"
+            setIsErrorShow(false)
+            console.log("changes aren't working")
         }
     }
     const onFindButton = () =>{
             if (val === ""){
-                warningRef.current.style.display="block"
+                console.log("button works")
+                setIsErrorShow(true)
             }else {
                 console.log(val)
             }
@@ -27,7 +30,7 @@ export const SearchYa = () => {
                              <div className="in1_1">
                                 <input
                                    className="in1"
-                                   ref = {changeInputRef}
+                                   ref = {useChangeInputRef}
                                    type="search"
                                    onChange={valCheck}
                                 />
@@ -36,8 +39,8 @@ export const SearchYa = () => {
                                      <button  id="in2" onClick = {onFindButton}>Найти</button>
                              </div>
                          </div>
-                         <div className="content_warning">
-                             <p className="inner_content_warning" ref = {warningRef}>Вы ничего не ввели!</p>
-                         </div>
+                        {isErrorShow && <div className="content_warning">
+                             <p className="inner_content_warning">Вы ничего не ввели!</p>
+                         </div>}
             </div>
 }

@@ -1,5 +1,5 @@
 import './LinkButton.css';
-const LinkButton = (props) => {
+export const LinkButton = (props) => {
     let text = props.anus
     if(text === undefined) text = "nichego"
     return <div className="general"
@@ -7,4 +7,3 @@ const LinkButton = (props) => {
         {text}
     </div>
 }
-export default LinkButton

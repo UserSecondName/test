@@ -1,5 +1,5 @@
 import './App.css';
-import LinkButton from "./LinkButton";
+import {LinkButton} from "./LinkButton";
 import {SearchYa} from "./SearchYa";
 
 function App() {

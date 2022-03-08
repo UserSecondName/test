@@ -1,9 +1,17 @@
+.Sgeneral{
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+}
+
 .Sgeneral_search{
     display:flex;
     border:3px solid #FFCC00;
     border-radius: 0.75rem 0.625rem 0.625rem 0.75rem;
     background-color:#FFCC00;
     height:30px;
+    width:60%;
+    align-self: center;
 }
 .in1_1{
     flex-grow:1;
@@ -11,7 +19,6 @@
 }
 .in2_2{
     width:90px;
-
 }
 .in1{
     padding-left:1%;
@@ -36,8 +43,12 @@
 #in2:focus{
     border:3px solid #FFCC00;
 }
+.content_warning{
+    height:13px;
+
+}
 .inner_content_warning{
     color:red;
     font-size:12px;
-    display:none;
+    display:block;
 }
