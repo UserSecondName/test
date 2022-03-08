@@ -11,15 +11,12 @@ export const SearchYa = () => {
         const a = setValue (useChangeInputRef.current.value)
         if (val === "" && a) {
             setIsErrorShow(true)
-            console.log("changes are working")
         } else{
             setIsErrorShow(false)
-            console.log("changes aren't working")
         }
     }
     const onFindButton = () =>{
             if (val === ""){
-                console.log("button works")
                 setIsErrorShow(true)
             }else {
                 console.log(val)
