@@ -1,7 +1,7 @@
 import './styles/App.css';
 import {LinkButton} from "./components/LinkButton";
 import {SearchYa} from "./components/SearchYa";
-import {Posts} from "./components/posts";
+import {Posts} from "./components/Posts";
 
 export function App () {
     const array123=[
@@ -9,6 +9,13 @@ export function App () {
             {name:"почта", key: "2"},
             {name:"Выход", key: "3"},
         ]
+    const searchResult = [
+        {id:1, title:"статья первая", description:"рассказ про науку"},
+        {id:2, title:"статья вторая", description:"рассказ про спорт"},
+        {id:3, title:"статья третья", description:"рассказ про искусство"},
+    ]
+
+
     return (
         <div className="App">
             <div className="header">
@@ -24,7 +31,14 @@ export function App () {
                     <SearchYa/>
                 </div>
                 <div className="content_search_result">
-                    <Posts post_title = "Zagolovka" post_body = "adhbasdjuawbd aw diawdwadwadwadwad awdwad awd wad wad wadwa dwad wad wadwa dwad wad wadwad wadwad wa dwadwad awi" />
+                    {searchResult.map((elemSearchRes)=>{
+                        return <Posts
+                            post_id = {elemSearchRes.id}
+                            post_title = {elemSearchRes.title}
+                            post_body = {elemSearchRes.description}
+                            />
+                    })}
+
                 </div>
 
             </div>
