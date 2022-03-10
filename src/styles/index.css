@@ -45,6 +45,12 @@ span{
   justify-content: center;
   margin: 30px;
 }
+.content_search{
+  padding-bottom:20px;
+}
+.content_search_result{
+  padding-top:30px;
+}
 .footer{
   font: 0.8em Arial,Helvetica,sans-serif;
   text-align:center;

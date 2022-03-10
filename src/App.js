@@ -1,8 +1,9 @@
-import './App.css';
-import {LinkButton} from "./LinkButton";
-import {SearchYa} from "./SearchYa";
+import './styles/App.css';
+import {LinkButton} from "./components/LinkButton";
+import {SearchYa} from "./components/SearchYa";
+import {Posts} from "./components/posts";
 
-function App() {
+export function App () {
     const array123=[
             {name:"awertus", key: "1"},
             {name:"почта", key: "2"},
@@ -19,7 +20,13 @@ function App() {
                 </div>
             </div>
             <div className="content">
-                    <SearchYa />
+                <div className="content_search">
+                    <SearchYa/>
+                </div>
+                <div className="content_search_result">
+                    <Posts post_title = "Zagolovka" post_body = "adhbasdjuawbd aw diawdwadwadwadwad awdwad awd wad wad wadwa dwad wad wadwa dwad wad wadwad wadwad wa dwadwad awi" />
+                </div>
+
             </div>
             <div className="footer">
                 <p ><b>ЯНДЕКС</b></p>
@@ -27,4 +34,3 @@ function App() {
         </div>);
 }
 
-export default App;

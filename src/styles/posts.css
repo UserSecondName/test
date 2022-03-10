@@ -1,0 +1,9 @@
+.posts_main{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow:1;
+    border:1px solid red;
+    padding:6px;
+    margin-top:20px;
+}

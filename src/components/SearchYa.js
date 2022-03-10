@@ -1,23 +1,17 @@
-import './SearchYa.css'
-
+import '../styles/SearchYa.css'
 import React,{useState} from 'react'
 
 export const SearchYa = () => {
 
     const [val, setValue] = useState("")
-    const [isErrorShow, setIsErrorShow] = useState (false)
-    let useChangeInputRef = React.createRef()
-    const valCheck = () => {
-        const a = setValue (useChangeInputRef.current.value)
-        if (val === "" && a) {
-            setIsErrorShow(true)
-        } else{
-            setIsErrorShow(false)
-        }
+    const [isErrorShowed, setIsErrorShowed] = useState (false)
+    const valCheck = (e) => {
+        setValue (e.target.value)
+        if (!!e.target.value) setIsErrorShowed (false)
     }
     const onFindButton = () =>{
             if (val === ""){
-                setIsErrorShow(true)
+                setIsErrorShowed (true)
             }else {
                 console.log(val)
             }
@@ -27,7 +21,6 @@ export const SearchYa = () => {
                              <div className="in1_1">
                                 <input
                                    className="in1"
-                                   ref = {useChangeInputRef}
                                    type="search"
                                    onChange={valCheck}
                                 />
@@ -36,7 +29,7 @@ export const SearchYa = () => {
                                      <button  id="in2" onClick = {onFindButton}>Найти</button>
                              </div>
                          </div>
-                        {isErrorShow && <div className="content_warning">
+                        {isErrorShowed && <div className="content_warning">
                              <p className="inner_content_warning">Вы ничего не ввели!</p>
                          </div>}
             </div>
