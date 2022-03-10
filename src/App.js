@@ -36,6 +36,7 @@ export function App () {
                             post_id = {elemSearchRes.id}
                             post_title = {elemSearchRes.title}
                             post_body = {elemSearchRes.description}
+                            key = {elemSearchRes.id}
                             />
                     })}
 
