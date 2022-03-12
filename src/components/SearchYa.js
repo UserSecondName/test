@@ -1,7 +1,7 @@
 import '../styles/SearchYa.css'
 import React,{useState} from 'react'
 
-export const SearchYa = () => {
+export const SearchYa = ({getPostList}) => {
 
     const [val, setValue] = useState("")
     const [isErrorShowed, setIsErrorShowed] = useState (false)
@@ -14,9 +14,17 @@ export const SearchYa = () => {
                 setIsErrorShowed (true)
             }else {
                 console.log(val)
+                fetch("http://alwertus.zapto.org:9010",
+                    {method: 'GET'})
+                    .then(rs => rs.json())
+                    .then((res)=> {
+                        Object.keys(res)
+                        return getPostList(res)
+                    })
             }
     }
-            return <div className="Sgeneral">
+
+            return <div className="Sgeneral" >
                          <div className="Sgeneral_search">
                              <div className="in1_1">
                                 <input
