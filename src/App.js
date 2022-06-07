@@ -6,7 +6,7 @@ import React, {useState} from "react";
 
 export function App () {
     const array123=[
-            {name:"awertus", key: "1"},
+            {name:"aw12rtus", key: "1"},
             {name:"почта", key: "2"},
             {name:"Выход", key: "3"},
         ]
