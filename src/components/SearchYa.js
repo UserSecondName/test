@@ -14,12 +14,27 @@ export const SearchYa = ({getPostList}) => {
                 setIsErrorShowed (true)
             }else {
                 console.log(val)
+                // fetch("http://alwertus.zapto.org:9010",
+                //     {method: 'GET'})
+                //     .then(rs => rs.json())
+                //     .then((res)=> {
+                //         getPostList(res)
+                //     })
                 fetch("http://alwertus.zapto.org:9010",
-                    {method: 'GET'})
+                // fetch("http://192.168.1.9:9010",
+                    {method: 'POST',
+                        headers:{"Content-Type": "application/json"},
+                        body: JSON.stringify({findText:val})
+                    })
                     .then(rs => rs.json())
                     .then((res)=> {
-                        Object.keys(res)
-                        return getPostList(res)
+                        const resultRev = res.map((re)=>{
+                            return(
+                                { ...re, title:re.title.split("").reverse().join("")}
+                            )
+                        })
+                        console.log(resultRev)
+                        getPostList(resultRev)
                     })
             }
     }
