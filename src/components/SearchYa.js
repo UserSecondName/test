@@ -28,12 +28,13 @@ export const SearchYa = ({getPostList}) => {
                     })
                     .then(rs => rs.json())
                     .then((res)=> {
-                        const resultRev = res.map((re)=>{
+                        const resultRev = res.map((re, index)=>{
                             return(
-                                { ...re, title:re.title.split("").reverse().join("")}
+                                { ...re, id:index + 1, title:re.title.split("").reverse().join(""), key:re.id}
                             )
                         })
                         console.log(resultRev)
+                        console.log(res.index)
                         getPostList(resultRev)
                     })
             }
