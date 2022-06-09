@@ -34,7 +34,6 @@ export const SearchYa = ({getPostList}) => {
                             )
                         })
                         console.log(resultRev)
-                        console.log(res.index)
                         getPostList(resultRev)
                     })
             }
