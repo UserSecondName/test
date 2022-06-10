@@ -2,6 +2,7 @@ import './styles/App.css';
 import {LinkButton} from "./components/LinkButton";
 import {SearchYa} from "./components/SearchYa";
 import {Posts} from "./components/Posts";
+import {PagesViewer} from "./components/PagesViewer";
 import React, {useState} from "react";
 
 export function App () {
@@ -41,9 +42,13 @@ export function App () {
                        return <Posts  post = {post} key = {post.id}/>
                     })}
                 </div>
+                <div className="content_buttons">
+                    <PagesViewer/>
+                </div>
             </div>
 
             <div className="footer" >
+
                 <p ><b>ЯНДЕКС</b></p>
             </div>
         </div>);
