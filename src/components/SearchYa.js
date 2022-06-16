@@ -21,7 +21,6 @@ export const SearchYa = ({getPostList}) => {
                 //         getPostList(res)
                 //     })
                 fetch("http://alwertus.zapto.org:9010",
-                // fetch("http://192.168.1.9:9010",
                     {method: 'POST',
                         headers:{"Content-Type": "application/json"},
                         body: JSON.stringify({findText:val})

@@ -4,19 +4,23 @@ import {PageOne} from "./PageOne";
 import {PageTwo} from "./PageTwo";
 import React, {useState} from 'react'
 
+const pages = [
+    <PageOne/>, <PageTwo/>, <PageOne/>
+]
+
 export const PagesViewer = () => {
-    const [isPageOne, setIsPageOne] = useState(false)
-    const [isPageTwo, setIsPageTwo] = useState(false)
+    const [selectedPage, setSelectedPage] = useState(1)
+    const drawPage = () => {
+        return pages [selectedPage]
+    }
 
     return(
         <div>
-            <LinkButton anus = "1 страница" link = {() => {setIsPageOne(true)
-                                                            if(isPageTwo) setIsPageTwo(false)}}/>
-            <LinkButton anus = "2 страница" link = {() => {setIsPageTwo(true)
-                                                            if(isPageOne) setIsPageOne(false)}}/>
+            <LinkButton anus = "1 страница" link = {() => {setSelectedPage(0)}}/>
+            <LinkButton anus = "2 страница" link = {() => {setSelectedPage(1)}}/>
+            <LinkButton anus = "3 страница" link = {() => {setSelectedPage(2)}}/>
             <div className = "PagesViewerSpace">
-                {isPageOne && <PageOne/>}
-                {isPageTwo && <PageTwo/>}
+                {drawPage()}
             </div>
         </div>
     )
